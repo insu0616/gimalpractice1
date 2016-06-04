@@ -13,7 +13,7 @@
             {% if post_detail.comment_set.all %}
                 {% for comment in post_detail.comment_set.all %}
                     <li>
-                        {{ comment.message }}
+                        {{ comment.message }} <a href="{% url 'blog:comment_edit' post_detail.pk comment.pk %}">수정</a>
                     </li>
                 {% endfor %}
             {% else %}
