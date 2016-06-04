@@ -9,9 +9,12 @@
         {{ post_detail.content }}<br><hr/>
         <div>
             <h2>덧글</h2>
+            <a href="{% url 'blog:comment_new' post_detail.pk %}" class="btn btn-default"> 덧글 생성 </a>
             {% if post_detail.comment_set.all %}
                 {% for comment in post_detail.comment_set.all %}
-                    {{ comment.message }}
+                    <li>
+                        {{ comment.message }}
+                    </li>
                 {% endfor %}
             {% else %}
                 <h3> 등록된 덧글이 없습니다 </h3>
