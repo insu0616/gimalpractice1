@@ -6,7 +6,7 @@ class Post(models.Model):
     content = models.TextField()
     photo = models.ImageField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
@@ -15,5 +15,5 @@ class Comment(models.Model):
     post = models.ForeignKey(Post)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
