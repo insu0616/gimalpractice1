@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="row">
+        <h1>{{ post_detail.title }}</h1>
+        생성일: {{ post_detail.created_at }}<br>
+        수정일: {{ post_detail.updated_at }}<hr/>
+        <img src="{{ post_detail.photo.url }}"/><hr/>
+        {{ post_detail.content }}
+    </div>
+{% endblock %}

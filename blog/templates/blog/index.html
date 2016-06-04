@@ -6,7 +6,7 @@
         <div class="col-sm-4">
             <img src="{{ post.photo.url }}" style="max-width: 100%;" />
             <div class="caption">
-                <a href="#">
+                <a href="{% url 'blog:detail' post.id %}">
                     {{ post.title }}
                 </a>
             </div>
